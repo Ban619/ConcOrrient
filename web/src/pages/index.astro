@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Topbar from "../components/Topbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Workspace from "../components/Workspace.astro";
+import ActivityRail from "../components/ActivityRail.astro";
+---
+
+<BaseLayout>
+  <div class="app-shell">
+    <Topbar />
+    <div class="layout">
+      <Sidebar />
+      <Workspace />
+      <ActivityRail />
+    </div>
+  </div>
+
+  <dialog class="idea-dialog" id="idea-dialog">
+    <form id="idea-form" method="dialog">
+      <div class="dialog-topline">
+        <span class="dialog-kicker">A THOUGHT IN MOTION</span>
+        <button class="close-button" type="button" id="close-dialog" aria-label="Close">×</button>
+      </div>
+      <h2>Start a thread</h2>
+      <p class="dialog-intro">It can be a rough thought. Give it a place to grow.</p>
+      <label class="field-label" for="idea-title">What’s on your mind?</label>
+      <input id="idea-title" name="title" maxlength="120" placeholder="A question, a spark, a small observation…" required />
+      <label class="field-label" for="idea-summary">Add a little context</label>
+      <textarea id="idea-summary" name="summary" maxlength="700" rows="4" placeholder="What got you thinking about this?" required></textarea>
+      <div class="field-label">Who should be part of it?</div>
+      <div class="mode-picker">
+        <label class="mode-option selected" data-mode-option="open">
+          <input type="radio" name="mode" value="open" checked />
+          <span class="mode-symbol">◌</span>
+          <span><strong>Open to everyone</strong><small>Anyone in this space can join.</small></span>
+          <span class="radio-dot"></span>
+        </label>
+        <label class="mode-option" data-mode-option="direct">
+          <input type="radio" name="mode" value="direct" />
+          <span class="mode-symbol">↗</span>
+          <span><strong>Invite someone</strong><small>Start a thread with one teammate.</small></span>
+          <span class="radio-dot"></span>
+        </label>
+      </div>
+      <div class="collaborator-field hidden" id="collaborator-field">
+        <label class="field-label" for="collaborator-select">Choose a teammate</label>
+        <select id="collaborator-select" name="collaborator"></select>
+      </div>
+      <label class="field-label" for="idea-tags">Add a few labels <span class="optional">optional · comma separated</span></label>
+      <input id="idea-tags" name="tags" maxlength="90" placeholder="research, workflow, questions" />
+      <div class="form-error" id="form-error" role="alert"></div>
+      <div class="dialog-actions">
+        <button class="secondary-button" type="button" id="cancel-dialog">Maybe later</button>
+        <button class="primary-button" type="submit">Open the thread <span>↗</span></button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+</BaseLayout>

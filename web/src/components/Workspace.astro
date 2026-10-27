@@ -1,0 +1,41 @@
+<main class="main-content">
+  <section class="welcome-row">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-dot"></span> A SHARED SPACE TO THINK OUT LOUD</div>
+      <h1>Ideas keep moving <span>when we do.</span></h1>
+      <p class="intro">Leave a thought. Pick one up later. Keep the good conversations going, on everyone’s time.</p>
+    </div>
+    <button class="primary-button" id="new-idea-button"><span class="plus">+</span> Start a thread</button>
+  </section>
+
+  <section class="workspace-summary" aria-label="Workspace summary">
+    <div class="summary-item"><span class="summary-number" id="open-count">—</span><span>open threads</span></div>
+    <span class="summary-divider"></span>
+    <div class="summary-item"><span class="summary-number" id="today-count">—</span><span>updated today</span></div>
+    <span class="summary-divider"></span>
+    <div class="summary-item mood"><span class="mood-icon">↗</span><span>Keep your own pace</span></div>
+  </section>
+
+  <section class="threads-section">
+    <div class="section-heading">
+      <div>
+        <h2>Threads in motion <span class="section-count" id="visible-count">0</span></h2>
+        <p>Small sparks, growing into something together.</p>
+      </div>
+      <div class="view-toggle" role="tablist" aria-label="Filter threads">
+        <button class="filter-button selected" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-button" data-filter="open" role="tab" aria-selected="false">Open</button>
+        <button class="filter-button" data-filter="exploring" role="tab" aria-selected="false">Exploring</button>
+        <button class="filter-button" data-filter="resolved" role="tab" aria-selected="false">Settled</button>
+      </div>
+    </div>
+    <div class="thread-list" id="thread-list" aria-live="polite"></div>
+    <div class="empty-state hidden" id="empty-state">
+      <span class="empty-orbit">✳</span>
+      <h3>No threads here yet</h3>
+      <p>Start a conversation and give the next person a place to join in.</p>
+      <button class="text-button" id="empty-create">Start the first thread <span>↗</span></button>
+    </div>
+    <div class="end-note"><span></span> There’s no rush. Threads wait for you. <span></span></div>
+  </section>
+</main>

@@ -1,0 +1,9 @@
+I want this to be a workspace load system wherein it'll grant collaboration overtime for developers or many users to sustain and elaborate ideas or opinions to work with.
+
+This software provides possible indication or notifications to all mutuals that collaborates with. Direct or indirect situations may be applied.
+
+Tech & Frames: 
+
+- Go lang
+
+

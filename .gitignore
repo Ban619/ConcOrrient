@@ -1,0 +1,25 @@
+/data.json
+/*.exe
+/*.exe~
+/hs_err_pid*.log
+/replay_pid*.log
+/android/.gradle/
+/android/build/
+/android/app/build/
+/android/local.properties
+
+# Dependencies and generated build output
+**/node_modules/
+**/.astro/
+**/dist/
+**/build/
+
+# Private data and local secrets
+**/private/
+.github/modernize/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx

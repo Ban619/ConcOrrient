@@ -1,0 +1,19 @@
+{
+  "name": "ConcOrrient",
+  "short_name": "ConcOrrient",
+  "description": "A calm collaborative workspace for leaving ideas in motion and picking them up later.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f2",
+  "theme_color": "#f6f7f2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
